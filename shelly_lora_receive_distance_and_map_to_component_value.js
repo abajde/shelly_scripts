@@ -82,6 +82,7 @@ function mapToVirtualComponent(data) {
   dataobj = JSON.parse(data);
   if (dataobj !== 'undefined') {
     if (dataobj.distance !== 'undefined') {
+        // Check your component id in UI (see it in the url;) !!
        Shelly.call("Number.Set", { "id": 200, "value": dataobj.distance });
        print("Distance", dataobj.distance);
     }
